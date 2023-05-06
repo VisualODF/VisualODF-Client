@@ -9,3 +9,6 @@
 @use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/menus";
 @use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/tables";
 
+// import custom iconfont by `iconfont.css`
+@use "assets/font/iconfont/custom/iconfont";
+
