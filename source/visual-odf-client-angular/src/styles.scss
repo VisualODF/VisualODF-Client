@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+// import stylesheets as a template, which has contained `normalize.css`.
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/base";
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/buttons";
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/forms";
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/grids";
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/grids-responsive";
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/menus";
+@use "node_modules/purecss-sass/vendor/assets/stylesheets/purecss/tables";
+
