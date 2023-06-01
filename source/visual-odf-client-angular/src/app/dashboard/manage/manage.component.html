@@ -1,0 +1,42 @@
+<div id="manage-container">
+
+  <article class="article-theme-wrapper">
+    <h2>管理变电站列表</h2>
+    <p>
+      可以新增，删除变电站节点，包括：名称，电压等级，位置信息等。
+    </p>
+  </article>
+
+  <div id="manage-table-global-operation">
+    <button class="pure-button pure-button-primary">新建节点</button>
+    <!-- <button class="pure-button click-warning">全部删除</button> -->
+  </div>
+
+  <table class="pure-table pure-table-horizontal">
+    <thead>
+    <tr>
+      <th id="table-thead-id">#ID</th>
+      <th id="table-thead-name">名称</th>
+      <th id="table-thead-level">电压等级</th>
+      <th id="table-thead-location">位置信息</th>
+      <th id="table-thead-operation">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let station of stations">
+      <td>{{station.id}}</td>
+      <td>{{station.name}}</td>
+      <td>{{station.level}}</td>
+      <td>{{station.location}}</td>
+      <td>
+        <app-manage-table-operation [station]="station"></app-manage-table-operation>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <app-empty-table-warning-p [showWarning]="stations.length==0"></app-empty-table-warning-p>
+
+</div>

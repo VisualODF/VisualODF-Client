@@ -1,0 +1,88 @@
+.primary-theme-wrapper {
+
+  // perfect font choice
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+  // most important appearance properties
+  // 1. reset font-size
+  font-size: 16px;
+  // 2. set a higher line to fit Chinese system
+  // pure.css use 1.6 and 1.0
+  // github markdown use 1.5
+  // markdownhere use 1.8
+  // typo.css use 1.8
+  // other Chinese system alse use 1.7 or 1.75 etc
+  line-height: 1.5em;
+  // 3. Set reasonable spacing between letters in Chinese system
+  letter-spacing: 0.1em;
+
+  code {
+    border-radius: 2px;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", monospace;
+  }
+
+  strong,
+  b {
+    color: #BF360C;
+  }
+
+  em,
+  i {
+    color: #009688;
+  }
+
+  // add hr element support
+  hr {
+    border: 0;
+    border-bottom: 1px solid #BF360C;
+    margin: 1.5em auto;
+  }
+
+  table {
+    width: 95%;
+    margin-inline: auto;
+
+    tr {
+      th {
+        font-weight: bold;
+        color: #eee;
+        border: 1px solid #009688;
+        background-color: #009688;
+      }
+    }
+  }
+
+  // i recommend using wrapped <img> element instand of a ![]() in markdown
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  ul,
+  ol {
+    font-size: 0.96em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #009688;
+  }
+
+  h1,
+  h2 {
+    padding-bottom: 0.25em;
+    margin-bottom: 0.75em;
+  }
+
+  blockquote,
+  q {
+    border-left: 6px solid #009688;
+    padding: 0 10px;
+  }
+
+  // i'm thinking about if with static highlight.js (test already succeeded!)
+}

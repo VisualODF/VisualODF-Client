@@ -1,0 +1,18 @@
+.manage-table-operation {
+  button {
+    font-size: 0.95em;
+    color: #ffffff;
+
+    &.operation-btn-view {
+      background-color: rgb(0, 120, 231);
+    }
+
+    &.operation-btn-modify {
+      background-color: #009688;
+    }
+
+    &.operation-btn-delete {
+      background-color: #d50000;
+    }
+  }
+}

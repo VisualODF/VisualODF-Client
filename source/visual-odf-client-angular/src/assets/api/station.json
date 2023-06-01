@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "StationName": "Sub Power Station 01",
+      "VoltageLevel": "100",
+      "Location": "Chongqing No.1"
+    },
+    {
+      "StationName": "Sub Power Station 02",
+      "VoltageLevel": "100",
+      "Location": "Chongqing No.2"
+    },
+    {
+      "StationName": "Sub Power Station 03",
+      "VoltageLevel": "100",
+      "Location": "Chongqing No.3"
+    },
+    {
+      "StationName": "Sub Power Station 04",
+      "VoltageLevel": "100",
+      "Location": "Chongqing No.4"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+// the classical blue
+$pure-primary-color: rgba(0, 120, 231, 0.85);
+
+a {
+  user-select: none;
+  cursor: pointer;
+}
+
+.pure-menu-link {
+  padding: 1em .7em;
+}
+
+.pure-menu-item i {
+  float: right;
+
+  &.pointerToLeft {
+    transform: rotate(90deg);
+  }
+}
+
+.children-list {
+  .pure-menu-list {
+    border-left: 3px solid $pure-primary-color;
+    padding-left: 1em;
+    font-size: 0.95em;
+
+    .pure-menu-link {
+      padding-block: .85em;
+    }
+
+  }
+}

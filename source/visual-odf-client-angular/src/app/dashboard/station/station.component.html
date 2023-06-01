@@ -1,0 +1,333 @@
+<div id="station-container">
+
+  <article class="article-theme-wrapper">
+    <h2>光纤单元资源管理</h2>
+    <p>
+      增加，修改或删除目标站点的光纤节点，每个站点可以拥有：
+    </p>
+
+    <ol>
+      <li>若干光纤单元盒，随机分布于各个机房。</li>
+      <li>每个单元盒最多拥有6张纤盘</li>
+      <li>每个纤盘拥有12个信号接口。</li>
+    </ol>
+
+  </article>
+
+  <article class="article-theme-wrapper">
+    <h2>
+      变电站信息
+    </h2>
+  </article>
+
+  <table class="pure-table pure-table-horizontal">
+    <thead>
+    <tr>
+      <th id="table-thead-id">#ID</th>
+      <th id="table-thead-name">名称</th>
+      <th id="table-thead-level">电压等级</th>
+      <th id="table-thead-location">位置信息</th>
+      <th id="table-thead-operation">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{station.id}}</td>
+      <td>{{station.name}}</td>
+      <td>{{station.level}}</td>
+      <td>{{station.location}}</td>
+      <td>
+        <button class="pure-button pure-button-primary">新建单元盒</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <article class="article-theme-wrapper">
+    <h2>
+      单元盒纤盘列表
+    </h2>
+  </article>
+
+  <table class="pure-table pure-table-horizontal">
+    <thead>
+    <tr>
+      <th id="table-rack-id">&ID</th>
+      <th id="table-rack-name">名称</th>
+      <th id="table-station-id">所属站点</th>
+      <th id="table-rack-is-full">空余纤口</th>
+      <th id="table-rack-operation">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let rack of racks">
+      <td>{{rack.id}}</td>
+      <td>{{rack.name}}</td>
+      <td>{{rack.stationId}}</td>
+      <td>正常</td>
+      <td>
+        <button class="pure-button pure-button-primary">
+          显示光纤盘
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table class="pure-table pure-table-horizontal">
+    <thead>
+    <tr>
+      <th>#1</th>
+      <th>#2</th>
+      <th>#3</th>
+      <th>#4</th>
+      <th>#5</th>
+      <th>#6</th>
+      <th>#7</th>
+      <th>#8</th>
+      <th>#9</th>
+      <th>#10</th>
+      <th>#11</th>
+      <th>#12</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr >
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+    </tr>
+    <tr >
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+    </tr>
+    <tr >
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+    </tr>
+    <tr >
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+    </tr>
+    <tr >
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button  "> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+    </tr>
+    <tr >
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+      <td>
+        <button class="pure-button pure-button-primary"> </button>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+  <app-empty-table-warning-p [showWarning]="false"></app-empty-table-warning-p>
+
+
+</div>

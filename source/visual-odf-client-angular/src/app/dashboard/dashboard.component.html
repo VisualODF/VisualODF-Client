@@ -1,125 +1,47 @@
 <div id="dashboard">
   <div class="header">
     <div class="pure-menu pure-menu-horizontal">
-      <a class="pure-menu-heading" href="">Grid Dashboard</a>
+      <a class="pure-menu-heading"
+         routerLink="/dashboard">
+        Dashboard 控制面板
+      </a>
 
+      <!-- this is permanent -->
       <ul class="pure-menu-list">
         <!--<li class="pure-menu-item pure-menu-selected">-->
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">Manage</a>
+          <a routerLink="manage" class="pure-menu-link">管理</a>
         </li>
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">Data</a>
+          <a routerLink="data" class="pure-menu-link">数据</a>
         </li>
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">Calculate</a>
+          <a routerLink="compute" class="pure-menu-link">计算服务</a>
         </li>
       </ul>
 
       <form class="pure-form header-search">
-        <input type="text" placeholder="Search..."/>
+        <input type="text" placeholder="搜索..."/>
       </form>
 
       <ul class="pure-menu-list header-account">
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">About</a>
+          <a href="#" class="pure-menu-link">关于</a>
         </li>
         <li class="pure-menu-item">
-          <a href="#" class="pure-menu-link">Sign Up & In</a>
+          <a href="" class="pure-menu-link">登录/注册</a>
         </li>
       </ul>
 
     </div>
   </div>
 
-  <div id="container">
-    <div id="sidebar">
-      <div class="pure-menu custom-restricted-width">
-        <span class="pure-menu-heading">Substation Lists</span>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 101<i class="iconfont icon-down"></i></a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 102<i class="iconfont icon-down"></i></a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 103<i class="iconfont icon-down"></i></a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 104<i class="iconfont icon-down"></i></a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 105<i class="iconfont icon-down"></i></a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 106<i class="iconfont icon-down"></i></a>
-          </li>
-          <li class="pure-menu-heading">More Infos</li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 201</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 202</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 203</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 204</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 205</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 206</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 207</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 208</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 209</a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Substation 210</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="main">
-      <!-- the perfect height of main is 875px -->
-      <h1>Title Title Title</h1>
-      <p>description description description description description description description description</p>
-      <p>description description description description description description description description</p>
-      <p>description description description description description description description description</p>
-
-      <div class="pure-button-group" role="group" aria-label="...">
-        <div class="pure-button pure-button-primary">
-          Click Left
-        </div>
-        <div class="pure-button pure-button-primary">
-          Click Middle
-        </div>
-        <div class="pure-button pure-button-primary">
-          Click Right
-        </div>
-        <div class="pure-button pure-button-primary" style="float: right">
-          Click Float
-        </div>
-      </div>
-
-
-      <app-topology-map></app-topology-map>
-
-
-    </div>
-  </div>
-
+  <router-outlet></router-outlet>
 
   <div class="footer">
     Developing by VisualODF TEAM.
   </div>
+
+  <app-dashboard-mask></app-dashboard-mask>
+
 </div>

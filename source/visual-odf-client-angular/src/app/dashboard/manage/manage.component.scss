@@ -1,0 +1,37 @@
+@use "../../common/scss/widgets/markdown/article";
+
+
+#manage-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  min-height: 92vh;
+
+  h2 {
+    color: #444;
+  }
+
+  #manage-table-global-operation {
+    margin-bottom: 0.25em;
+
+  }
+
+  table {
+    width: 100%;
+
+    tr {
+      line-height: 2em;
+    }
+
+    thead {
+
+      background-color: #eee;
+
+      th#table-thead-name {
+      width: 40%;
+      }
+      th#table-thead-operation {
+        width: 22.5%;
+      }
+    }
+  }
+}

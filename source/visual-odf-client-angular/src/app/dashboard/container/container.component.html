@@ -1,0 +1,55 @@
+<div id="container">
+  <!-- the sidebar for hold list or info -->
+  <div id="sidebar">
+    <div class="pure-menu custom-restricted-width">
+      <span class="pure-menu-heading">站点列表</span>
+      <ul class="pure-menu-list">
+
+        <!-- generate list for power stations -->
+        <app-sidebar-station-list-item *ngFor="let station of stations"
+                                       [station]=station>
+        </app-sidebar-station-list-item>
+
+        <!-- this is fake, for showing it should be like -->
+        <!--<li class="pure-menu-item">-->
+        <!--    <a href="#" class="pure-menu-link">Substation 101<i class="iconfont icon-down"></i></a>-->
+        <!--</li>-->
+        <li class="pure-menu-heading">近期日志</li>
+        <!-- fake, too -->
+        <li class="pure-menu-item">
+          <a class="pure-menu-link">无</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="main">
+    <!-- the perfect height of main is 875px -->
+    <h1>光纤智能可视化管理系统</h1>
+    <p>
+      光纤系统可视化是为了改善传统电力系统的管理压力。系统旨在提高光纤资源的管理效率和运维工作的智能化水平，通过集成数据管
+    </p>
+    <p>
+      理、用户登录、新建、修改、删除、查看等功能实现对资源信息的灵活操作。
+    </p>
+    <p>
+      PS：左侧的<strong>侧栏</strong>管理变电站节点信息，拓扑图会根据连接情况<strong>实时绘制2D数据表</strong>。
+    </p>
+
+    <div class="pure-button-group" role="group" aria-label="...">
+      <div class="pure-button pure-button-primary">
+        新建节点
+      </div>
+      <div class="pure-button pure-button-primary">
+        新建连线
+      </div>
+      <div class="pure-button pure-button-primary">
+        重新绘制
+      </div>
+    </div>
+
+
+    <app-topology-map></app-topology-map>
+
+
+  </div>
+</div>

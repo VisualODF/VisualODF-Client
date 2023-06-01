@@ -1,0 +1,22 @@
+<li class="pure-menu-item">
+  <a (click)="showChildren=!showChildren"
+     class="pure-menu-link">
+  {{station.name}}
+    <i [class.pointerToLeft]="showChildren" class="iconfont icon-down"></i>
+  </a>
+
+  <!-- control the display by binding -->
+  <div class="children-list" [class.hidden]="!showChildren">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a class="pure-menu-link">查看</a>
+      </li>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link">编辑</a>
+      </li>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link">绘制节点</a>
+      </li>
+    </ul>
+  </div>
+</li>

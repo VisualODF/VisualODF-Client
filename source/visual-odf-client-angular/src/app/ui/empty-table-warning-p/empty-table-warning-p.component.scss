@@ -1,0 +1,8 @@
+@use "../../common/scss/widgets/markdown/article";
+
+article.empty-table-warning p {
+  margin-block: 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+

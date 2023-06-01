@@ -1,0 +1,207 @@
+@use "./article/theme/article-theme-primary";
+
+.article-theme-wrapper {
+  // using the theme
+  @extend .primary-theme-wrapper;
+  // override can be here
+
+}
+
+// Mainly use `em`, so the font-size can be controlled by
+// container element.
+article {
+
+  // This is a universal margin style for:
+  // <h1>..<h6>
+  %MarginBoldHeading {
+    margin: 1.3em 0 1em;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  // This is a universal margin style for:
+  // 1. <pre> <blockquote><q>
+  // 2. <ul><ol><dl> <table>
+  %MarginLineElement {
+    margin: 1.2em 0;
+  }
+
+  h1 {
+    @extend %MarginBoldHeading;
+    font-size: 1.6em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  h2 {
+    @extend %MarginBoldHeading;
+    font-size: 1.4em;
+    border-bottom: 1px solid #eee;
+  }
+
+  h3 {
+    @extend %MarginBoldHeading;
+    font-size: 1.3em;
+  }
+
+  h4 {
+    @extend %MarginBoldHeading;
+    font-size: 1.2em;
+  }
+
+  h5 {
+    @extend %MarginBoldHeading;
+    font-size: 1em;
+  }
+
+  h6 {
+    @extend %MarginBoldHeading;
+    font-size: 1em;
+    color: #777;
+  }
+
+  p {
+    margin: 0 0 1.2em 0;
+  }
+
+  blockquote,
+  q {
+    @extend %MarginLineElement;
+
+    // Clear the virtual content.
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    border-left: 4px solid #DDD;
+    padding: 0 1em;
+    color: #777;
+    quotes: none;
+  }
+
+  pre,
+  code {
+    font-size: 0.85em;
+    font-family: Consolas, Inconsolata, Courier, monospace;
+  }
+
+  code {
+
+    margin: 0 0.15em;
+    padding: 0 0.3em;
+    white-space: pre-wrap;
+    border: 1px solid #EAEAEA;
+    background-color: #F8F8F8;
+    border-radius: 3px;
+    display: inline;
+  }
+
+  pre {
+    @extend %MarginLineElement;
+
+    font-size: 1em;
+    line-height: 1.2em;
+
+    code {
+      white-space: pre;
+      overflow: auto;
+      border-radius: 3px;
+      border: 1px solid #CCC;
+      padding: 0.5em 0.7em;
+      display: block;
+    }
+  }
+
+  ul,
+  ol {
+
+    @extend %MarginLineElement;
+    padding-left: 2em;
+
+    // Set a smaller spacing for sub-lists.
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1em;
+
+      ol {
+        // Use letters for sub-sub-ordered lists. (Like Github.)
+        list-style-type: lower-alpha;
+      }
+    }
+
+    ol {
+      // Use Roman numerals for sub-ordered-lists. (Like Github.)
+      list-style-type: lower-roman;
+    }
+  }
+
+  li {
+    margin: 0.5em 0;
+
+    p {
+      margin: 0.5em 0;
+    }
+  }
+
+  dl {
+
+    @extend %MarginLineElement;
+
+    padding: 0;
+
+    dt {
+      font-size: 1em;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    dd {
+      margin: 0 0 1em;
+      padding: 0 1em;
+    }
+  }
+
+  table {
+
+    @extend %MarginLineElement;
+
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    font: inherit;
+    border: 0;
+
+    tr {
+      border: 0;
+      border-top: 1px solid #CCC;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+
+      &:nth-child(2n) {
+        background-color: #F8F8F8;
+      }
+
+      th,
+      td {
+        font-size: 1em;
+        border: 1px solid #CCC;
+        margin: 0;
+        padding: 0.5em 1em;
+      }
+
+      th {
+        font-weight: bold;
+        background-color: #F0F0F0;
+      }
+    }
+  }
+
+  tbody {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
